@@ -1,0 +1,15 @@
+<div mat-dialog-title no-margin *ngIf="data.title">
+  <div fxLayout="row" fxLayoutAlign="center center" class="header-row">
+      <h3 no-margin modal-title aria-label="">{{ data.title | translate: data.titleParams }}</h3>
+  </div>
+</div>
+<mat-dialog-content no-margin no-padding>
+  <p no-margin>{{ data.message | translate: data.messageParams }}</p>
+</mat-dialog-content>
+<mat-dialog-actions fxLayout="row" fxLayoutAlign="center center">
+    <button mat-stroked-button (click)="onDecline()"
+      color="secondary">{{ data.declineButtonText | translate }}</button>
+      <button mat-flat-button (click)="onAccept()"
+          color="primary">{{ data.acceptButtonText | translate }}</button>
+</mat-dialog-actions>
+
