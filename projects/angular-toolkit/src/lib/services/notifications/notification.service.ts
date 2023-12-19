@@ -8,6 +8,8 @@ import { map } from 'rxjs/operators';
 import { AcceptDialogComponent } from './components/accept-dialog/accept-dialog.component';
 import { AcceptOptions, ConfirmOptions, IAcceptOptions, IConfirmOptions, NotificationType } from './notification.types';
 
+
+
 @Injectable()
 export class NotificationService {
 
@@ -77,5 +79,20 @@ export class NotificationService {
 
       return notificationRef.afterClosed();
   }
+}
+
+export interface INotificationService {
+
+  showToast(
+    message: string,
+    type?: NotificationType,
+    action?: string,
+    messageParams?: any,
+    timeOut?: number): Observable<boolean>;
+
+  presentConfirm(options?: IConfirmOptions): Observable<any>;
+
+
+  presentMessage(options?: IAcceptOptions): Observable<any>;
 }
 
