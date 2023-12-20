@@ -1,1 +1,1 @@
-export * from './lib/angular-toolkit.module';
+export * from './angular-toolkit.module';
