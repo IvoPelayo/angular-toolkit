@@ -8,7 +8,7 @@ import {
     ElementRef,
     Optional
 } from '@angular/core';
-import { Observable, Subscription, merge } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { MatFormField } from '@angular/material/form-field';
 import { FormGroupDirective, FormArrayName } from '@angular/forms';
@@ -61,8 +61,6 @@ export class ValidationErrorDirective implements AfterViewInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        if (this.subscription) {
-            this.subscription.unsubscribe();
-        }
+        this.subscription?.unsubscribe();
     }
 }
