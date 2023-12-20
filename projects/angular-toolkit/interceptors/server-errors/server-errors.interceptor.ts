@@ -9,7 +9,7 @@ import {
 
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { INotificationService, NOTIFICATION_SERVICE, NotificationType } from '../../services/notifications';
+import { INotificationService, NOTIFICATION_SERVICE, NotificationType } from '@ivo-pealyo/angular-toolkit/src/lib/services/notifications';
 
 /**
  * Angular http interceptor used display error messages on the UI

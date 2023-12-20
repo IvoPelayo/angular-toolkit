@@ -5,6 +5,9 @@
     "paths": {
       "angular-toolkit": [
         "dist/angular-toolkit"
+      ],
+      "@ivo-pealyo/angular-toolkit": [
+        "projects/angular-toolkit"
       ]
     },
     "baseUrl": "./",
