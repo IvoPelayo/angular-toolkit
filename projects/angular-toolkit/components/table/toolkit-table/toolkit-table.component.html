@@ -1,0 +1,24 @@
+<div class="table-container" fxFlex fxLayout="column">
+  <mat-table [dataSource]="dataSource" matSort #table="matSort" class="mdc-mat-elevation-z8" fxFlex>
+    <ng-container *ngFor="let column of columnService.columns" [matColumnDef]="column.name">
+      <mat-header-cell *matHeaderCellDef>
+        <ng-container *ngIf="column.sort; else notSortable">
+          <span [mat-sort-header]="column.sortKey ||column.name"> {{ (column.title || column.name) | translate }} </span>
+        </ng-container>
+        <ng-template #notSortable><span>{{ (column.title || column.name) | translate }}</span></ng-template>
+      </mat-header-cell>
+      
+      <mat-cell *matCellDef="let element">
+        {{ columnService.renderCell(element, column) ?? '' | translate }}
+      </mat-cell>
+  </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="columnService.columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnService.columnNames;" (click)="rowClicked.emit(row)"></mat-row>
+  </mat-table>
+  
+  <mat-paginator fxFlex #paginator [pageSizeOptions]="config.pageSizeOptions ?? []" [pageSize]="config.pageSize"
+   [pageIndex]="config.page -1" (page)="onPaginationChange($event)"></mat-paginator>
+  
+</div>
+
