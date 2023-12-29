@@ -2,10 +2,10 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { LayoutService } from './layout.service';
 
 @NgModule({})
-export class LayoutToolkitModule {
-  public static forRoot(): ModuleWithProviders<LayoutToolkitModule> {
+export class ToolkitLayoutModule {
+  public static forRoot(): ModuleWithProviders<ToolkitLayoutModule> {
     return {
-      ngModule: LayoutToolkitModule,
+      ngModule: ToolkitLayoutModule,
       providers: [
         LayoutService,
       ],

@@ -13,10 +13,10 @@ import { TranslateModule } from '@ngx-translate/core';
     LoadingOverlayComponent
   ]
 })
-export class LoaderToolkitModule {
-  public static forRoot(): ModuleWithProviders<LoaderToolkitModule> {
+export class ToolkitLoaderModule {
+  public static forRoot(): ModuleWithProviders<ToolkitLoaderModule> {
     return {
-      ngModule: LoaderToolkitModule,
+      ngModule: ToolkitLoaderModule,
       providers: [
         LoaderService,
       ],

@@ -21,10 +21,10 @@ export const NOTIFICATION_SERVICE = new InjectionToken<INotificationService>('NO
     TranslateModule,
   ]
 })
-export class NotificationsToolkitModule {
-  public static forRoot(): ModuleWithProviders<NotificationsToolkitModule> {
+export class ToolkitNotificationsModule {
+  public static forRoot(): ModuleWithProviders<ToolkitNotificationsModule> {
     return {
-      ngModule: NotificationsToolkitModule,
+      ngModule: ToolkitNotificationsModule,
       providers: [
         NotificationService,
         { provide: NOTIFICATION_SERVICE, useClass: NotificationService}

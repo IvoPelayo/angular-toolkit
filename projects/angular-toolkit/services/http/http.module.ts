@@ -2,10 +2,10 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { HttpService } from './http.service';
 
 @NgModule({})
-export class HttpToolkitModule {
-  public static forRoot(): ModuleWithProviders<HttpToolkitModule> {
+export class ToolkitHttpModule {
+  public static forRoot(): ModuleWithProviders<ToolkitHttpModule> {
     return {
-      ngModule: HttpToolkitModule,
+      ngModule: ToolkitHttpModule,
       providers: [
         HttpService,
       ],
