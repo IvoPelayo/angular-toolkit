@@ -1,0 +1,15 @@
+<div class="content" fxFlex>
+    <div class="top-toolbar" fxLayout="row" fxLayoutAlign="space-between center">
+        <a [routerLink]="logoImageUrl" class="nav-brand">
+            <img [src]="logoImage" class="nav-brand__logo" />
+        </a>
+        <div fxLayout="row" fxLayoutGap="15px">
+            <router-outlet name="top-bar-right"></router-outlet>
+            <ng-content select="[top-bar-right]"></ng-content>
+        </div>
+    </div>
+</div>
+<mat-toolbar color="primary" class="bottom-toolbar" fxLayout="row" fxLayoutAlign="space-around center">
+    <router-outlet name="navigation"></router-outlet>
+    <ng-content select="[navigation]"></ng-content>
+</mat-toolbar>
