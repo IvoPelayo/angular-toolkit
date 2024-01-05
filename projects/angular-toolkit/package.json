@@ -1,6 +1,10 @@
 {
-  "name": "@ivo-pealyo/angular-toolkit",
-  "version": "0.0.1",
+  "name": "ivo-pealyo-angular-toolkit",
+  "version": "0.0.2",
+  "private": false,
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "peerDependencies": {
     "@angular/common": "^16.2.0",
     "@angular/core": "^16.2.0",
@@ -14,5 +18,23 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "description": "This library is a compilation of useful tools for developing Angular applications, such as infrastruture and generic services, models and components.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvoPelayo/angular-toolkit.git"
+  },
+  "keywords": [
+    "angular",
+    "toolkit",
+    "tools",
+    "core"
+  ],
+  "author": "ivoPelayo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvoPelayo/angular-toolkit/issues"
+  },
+  "homepage": "https://github.com/IvoPelayo/angular-toolkit#readme"
 }

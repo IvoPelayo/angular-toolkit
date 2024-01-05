@@ -6,7 +6,7 @@
       "angular-toolkit": [
         "dist/angular-toolkit"
       ],
-      "@ivo-pealyo/angular-toolkit": [
+      "ivo-pealyo-angular-toolkit": [
         "projects/angular-toolkit"
       ]
     },
